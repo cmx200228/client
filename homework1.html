@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义三角形的高度
+        const height = 5;
+
+        document.write('<br> <div">三角形</div> <br>');
+        // 循环打印每一行
+        for (let i = 1; i <= height; i++) {
+            // 打印每一行前面的空格
+            for (let j = 1; j <= height - i; j++) {
+                document.write('&nbsp;&nbsp;');
+            }
+            // 打印每一行的星号
+            for (let k = 1; k <= i; k++) {
+                document.write('*&nbsp;&nbsp;&nbsp;');
+            }
+            // 换行
+            document.write('<br>');
+        }
+        document.write('<br> <div">平行四边形</div> <br>');
+        // 打印平行四边形
+        for (let i = 1; i <= height; i++) {//209020143 陈蒙欣
+            // 打印每一行前面的空格
+            for (let j = 1; j <= height - i; j++) {
+                document.write('&nbsp;&nbsp;');
+            }
+            // 打印每一行的星号
+            for (let k = 1; k <= height; k++) {
+                document.write('*  ');
+            }
+            // 换行
+            document.write('<br>');
+        }
+
+        document.write('<br> <div">菱形</div> <br>');
+        // 打印菱形
+        // 打印上半部分
+        for (let i = 1; i <= 3 ; i++) {
+            // 打印每一行前面的空格
+            for (let j = 1; j <= height - i; j++) {
+                document.write('&nbsp;&nbsp;');
+            }
+            // 打印每一行的星号
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                document.write('*&nbsp;');
+            }
+            // 换行
+            document.write('<br>');
+        }
+
+        // 打印下半部分
+        for (let i = 2 ; i >= 1; i--) {
+            // 打印每一行前面的空格
+            for (let j = 1 ; j <= height - i; j++) {
+                document.write('&nbsp;&nbsp;');
+            }
+            // 打印每一行的星号
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                document.write('*&nbsp;');
+            }
+            // 换行
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>
