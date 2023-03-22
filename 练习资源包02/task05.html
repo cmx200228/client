@@ -120,15 +120,20 @@
 		// 209020143陈蒙欣	
 		//菜单收缩与扩展
 		function show(event,title) {
+			// 获取当前点击的菜单
 			let currentMenu = document.getElementById(title);
+			// 获取当前菜单的状态
 			let currentStatus = currentMenu.style.display;
+			// 获取所有的菜单
 			let allMenus = document.querySelectorAll('#cont_left ul[id]');
-			console.log(allMenus);
+			//遍历菜单
 			for (let i = 0; i < allMenus.length; i++) {
+				// 如果当前菜单不是点击的菜单（id不同），则隐藏
 				if (allMenus[i].id !== title) {
 					allMenus[i].style.display = "none";
 				}
 			}
+			// 判断当前菜单的状态，如果是隐藏，则显示，否则隐藏
 			currentMenu.style.display = currentStatus == "" ? "none" : "";			
 		}
 
