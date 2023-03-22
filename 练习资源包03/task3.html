@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>让坦克开起来</title>
+	<style type="text/css">
+		input {
+			font-size: 26px;
+			margin-top: 20px;
+		}
+
+		body {
+			background-image: url(images/grassland.png);
+		}
+
+		#mytank {
+			position: absolute;
+			left: 10px;
+			top: 100px
+		}
+	</style>
+</head>
+
+<body>
+	<img id="mytank" src="images/right.png" />
+	<script type="text/javascript">
+		// 209020143陈蒙欣
+		//获取坦克
+		var tank = document.getElementById("mytank");
+		var positionX = 10; // 初始坦克位置
+		var positionY = 100;
+		var direction = "right"; // 初始坦克朝向
+		var speed = 10; // 坦克移动速度
+	
+		// 按键监听
+		document.addEventListener("keydown", function(event) {
+		  switch(event.keyCode) {
+			case 87: // W键
+			case 38: // 上箭头
+			  if (positionY > 0) { // 限制坦克不能开出屏幕
+				//网页坐标系以左上角为原点，所以向上移动时，坐标值减小
+				positionY -= speed;
+			  }
+			  tank.src = "images/up.png"; // 切换坦克方向
+			  direction = "up";
+			  break;
+			case 65: // A键
+			case 37: // 左箭头
+			  if (positionX > 0) {
+				positionX -= speed;
+			  }
+			  tank.src = "images/left.png";
+			  direction = "left";
+			  break;
+			case 83: // S键
+			case 40: // 下箭头
+			  if (positionY < window.innerHeight - tank.offsetHeight) {
+				positionY += speed;
+			  }
+			  tank.src = "images/down.png";
+			  direction = "down";
+			  break;
+			case 68: // D键
+			case 39: // 右箭头
+			  if (positionX < window.innerWidth - tank.offsetWidth) {
+				positionX += speed;
+			  }
+			  tank.src = "images/right.png";
+			  direction = "right";
+			  break;
+		  }
+		  tank.style.left = positionX + "px"; // 更新坦克位置
+		  tank.style.top = positionY + "px";
+		});
+	
+		// 禁用右键菜单
+		document.oncontextmenu = function() {
+		  return false;
+		};
+	  </script>
+</body>
+
+</html>
