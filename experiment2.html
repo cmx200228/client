@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 209020143 陈蒙欣
+        // console.log(Number(true),Number(null),+undefined);
+        // console.log(Boolean('100'),Boolean(100),Boolean(null),!!undefined);
+        // console.log(parseInt(123.6),parseInt(0b1011011),parseInt(0X2A),parseInt(0X2A,8));
+        // console.log(parseFloat('123.6'),parseFloat('100px'),parseFloat(010));
+        // console.log(eval('87*99+2'));
+        // console.log(isNaN(null),isNaN('123'),isNaN('abc'),isNaN('a1b2c3'));
+        // var arr1 = [];
+        // console.log(arr1,arr1.length);
+        // var arr2 = [1,2,3];
+        // // console.log(arr2[0],arr2.length);
+        // // var arr3 = new Array();
+        // // console.log(arr3[1],arr3.length);
+        // var arr4 = arr2.slice(1);
+        // console.log('保留原数组写法：');
+        // for(var i in arr4){
+        //     console.log(arr4[i]);
+        // }
+        // console.log('不保留原数组写法：');
+        // arr2.shift();
+        // for(var i in arr2){
+        //     console.log(arr2[i]);
+        // }
+        //     var data = new Date();
+        //     console.log(data.getHours()+":"+data.getMinutes()+":"+data.getSeconds());
+        // var reg1 = /^\d{4}$/;
+        // console.log(reg1.test('1234'),
+        // reg1.test('1a34'),
+        // reg1.test('12345'),);
+        // var reg2 = new RegExp("^[sp]\\d{1,4}$","i");
+        // console.log(reg2.test('p123'),
+        //     reg2.test('1234'),
+        //     reg2.test('S10'));
+        // let regex = /^(133|153|189|180)\d{8}$/;
+        // let phoneNumbers = ["13312345678", "18512345678", "15312345678", "18912345678", "18012345678"];
+
+        // phoneNumbers.forEach(phoneNumber => {
+        //     let match = regex.test(phoneNumber);
+        //     console.log(`${phoneNumber}${match ? "是" : "不是"}一个中国电信号码`);
+        // });
+        // let email = "123456789@qq.com";
+        // let regex = /(\d+)@qq\.com/;
+        // let match = regex.test(email);
+        // if(match){
+        //     console.log("qq号是："+email.slice(0 , email.indexOf("@")));
+        // }else{
+        //     console.log("不是qq邮箱");
+        // }
+        // for(let i = 0; i < 5 ; i++){
+        // console.log(Math.floor(Math.random()*3)+1);
+        // }
+        var x = 1;
+        function A(y){
+            var x = 2;
+            function B(z){
+                console.log(x+y+z);
+            }
+            return B;
+        }
+        var C = A(2);
+        C(3);
+    </script>
+</body>
+
+</html>

@@ -45,16 +45,93 @@
         // "use strict";
         // num = 100;
         "use strict"
-        function myFunction() {
-            try {
-                x = 10; // 没有使用var声明变量，会抛出ReferenceError错误
-            } catch(error){
-                console.error("程序出错啦：" + error.message);
-            }
-        }
-        myFunction();
+        // function myFunction() {
+        //     try {
+        //         x = 10; // 没有使用var声明变量，会抛出ReferenceError错误
+        //     } catch(error){
+        //         console.error("程序出错啦：" + error.message);
+        //     }
+        // }
+        // myFunction();
+        // var obj1 =  {
+        //     name : "obj1",
+        //     sex:8,
+        //     run:function(){
+        //         console.log(this.name + "在跑步");
+        //     }
+        // }
+        // var obj2 = new Object();
+        // obj2.name = '张三';
+        // obj2.age = 20;
+        // obj2.run = function(){
+        //     console.log(this.name + "在跑步");
+        // }
+
+        // function obj3(name,sex){
+        //     this.name = name;
+        //     this.sex = sex;
+        //     this.run = function(){
+        //         console.log(this.name + "在跑步");
+        //     }
+        // }
+        // var obj4 = new obj3("李四",男);
+
+        // function Person(name , sex){
+        //     this.name = name;
+        //     this.sex = sex;
+        // }
+        // person.prototype.run = function(){
+        //     console.log(this.name + "在跑步");
+        // }
+        // var obj7 = new Person("刘备" , "男");
+        // console.log(obj7);
+        // obj7.run();
+
+        // var Person = {
+        //     show:function(){
+        //         console.log("我是"+this.name+"("+this.sex+")");
+        //     }
+        // }
+        // function Person(name){
+        //     this.name = name;
+        // }
+        // Person.prototype.run = function(){
+        //     console.log(this.name + "在跑步");
+        // }
+        // function Worker(name , salary){
+        //     Person.call(this , name);
+        //     this.salary = salary;
+        // }
+        // Worker.prototype = new Person();
+        // var obj = new Worker("赵云",100);
+        // console.log(obj);
+        // var Person1 = {
+        //     name:"刘备",
+        //     sex:"男",
+        //     run:function(){
+        //         console.log("跑");
+        //     }
+        // }
+        // var person2 = Object.create(Person1);
+        // console.log(person2);
+        // {
+        //     var a = 1;
+        //     let b = 2;
+        // }
+        // console.log(a);
+        // console.log(b);
+
+        // for(let i = 0 ; i < 10 ; i++){
+        //     console.log(i);
+        // }
+        // console.log(i);
+        console.log(a);
+        var a = 100;
+        console.log(b);
+        let b = 200;
 
     </script>
+
 </body>
 
 </html>
